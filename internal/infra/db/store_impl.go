@@ -7,12 +7,12 @@ import (
 	"github.com/jackc/pgx/v5/pgxpool"
 )
 
-type StoreImpl struct {
+type store struct {
 	pool *pgxpool.Pool
 }
 
 func NewPostgresStore(pool *pgxpool.Pool) Store {
-	return &StoreImpl{pool: pool}
+	return &store{pool: pool}
 }
 
 func (s *store) ExecQuery(ctx context.Context, sql string, args ...any) ([]map[string]interface{}, error) {
