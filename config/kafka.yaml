@@ -1,0 +1,6 @@
+brokers:
+  - "localhost:9092"
+client_id: "logging-server"
+retries: 3
+compression: "snappy"
+acks: "all"

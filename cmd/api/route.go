@@ -20,7 +20,7 @@ func setupRouter(cfg *config.Config, logg *zap.SugaredLogger, infra *Infra) *gin
 		c.JSON(200, gin.H{"status": "ok"})
 	})
 
-	// Bạn có thể dùng: infra.DB, infra.Redis
+	// infra.DB, infra.Redis
 
 	return r
 }

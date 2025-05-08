@@ -16,6 +16,7 @@ type Config struct {
 	Redis      RedisConfig
 	Log        LogConfig
 	Clickhouse ClickhouseConfig
+	Kafka      KafkaConfig
 }
 
 func LoadAllConfigs(dir string) (*Config, error) {
@@ -32,6 +33,7 @@ func LoadAllConfigs(dir string) (*Config, error) {
 		{"redis", &cfg.Redis, func(v *viper.Viper) { overrideEnv(v, "redis") }},
 		{"log", &cfg.Log, func(v *viper.Viper) { overrideEnv(v, "log") }},
 		{"clickhouse", &cfg.Clickhouse, func(v *viper.Viper) { overrideEnv(v, "clickhouse") }},
+		{"kafka", &cfg.Kafka, func(v *viper.Viper) { overrideEnv(v, "kafka") }},
 	}
 	log.Print(load)
 	for _, item := range load {
