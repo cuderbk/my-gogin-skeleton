@@ -3,6 +3,7 @@ package logger
 import (
 	"log"
 	"os"
+	"path/filepath"
 	"strings"
 
 	"my-gogin-skeleton/config"
@@ -42,7 +43,16 @@ func New(cfg config.LogConfig) *zap.SugaredLogger {
 
 	var output zapcore.WriteSyncer
 	if strings.ToLower(cfg.Output) == "file" {
-		logFile := "logs/app.log"
+		logFile := cfg.Filename
+		if logFile == "" {
+			log.Fatalf("log output is 'file' but no 'filename' is provided")
+		}
+
+		logDir := filepath.Dir(logFile)
+
+		if err := os.MkdirAll(logDir, 0755); err != nil {
+			log.Fatalf("failed to create log dir: %v", err)
+		}
 		f, err := os.OpenFile(logFile, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 		if err != nil {
 			log.Fatalf("failed to open log file: %v", err)

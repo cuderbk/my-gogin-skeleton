@@ -6,12 +6,11 @@ import (
 	"my-gogin-skeleton/internal/infra"
 
 	"github.com/gin-gonic/gin"
-	"go.uber.org/zap"
 )
 
-func SetupRouter(cfg *config.Config, logg *zap.SugaredLogger, infra *infra.Infra) *gin.Engine {
+func SetupRouter(cfg *config.Config, infra *infra.Infra) *gin.Engine {
 	r := gin.New()
-	r.Use(gin.Logger(), gin.Recovery())
+	r.Use(middleware.ZapLogger(), gin.Recovery())
 	r.Use(middleware.CORS(), middleware.RequestID())
 
 	api := r.Group("/api/v0")

@@ -1,3 +1,4 @@
 level: info
 pretty: true
-output: stdout
+output: file # file, stdout, stderr
+filename: logs/app.log

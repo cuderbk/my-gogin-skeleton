@@ -33,7 +33,7 @@ func main() {
 		logg.Fatalf("infra init error: %v", err)
 	}
 
-	engine := SetupRouter(cfg, logg, infra)
+	engine := SetupRouter(cfg, infra)
 	srv := &http.Server{
 		Addr:    cfg.App.HostPort,
 		Handler: engine,
