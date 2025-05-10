@@ -1,7 +1,7 @@
 package middleware
 
 import (
-	"logging/internal/common/response"
+	"my-gogin-skeleton/internal/common/response"
 	"net/http"
 	"strings"
 

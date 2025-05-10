@@ -4,11 +4,11 @@ import (
 	"context"
 	"fmt"
 
-	"logging/config"
-	"logging/internal/common/logger"
-	"logging/internal/infra/cache"
-	"logging/internal/infra/db"
-	"logging/internal/infra/kafka"
+	"my-gogin-skeleton/config"
+	"my-gogin-skeleton/internal/common/logger"
+	"my-gogin-skeleton/internal/infra/cache"
+	"my-gogin-skeleton/internal/infra/db"
+	"my-gogin-skeleton/internal/infra/kafka"
 )
 
 type Infra struct {

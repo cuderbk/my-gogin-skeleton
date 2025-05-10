@@ -1,14 +1,14 @@
 brokers:
   - "localhost:9092"
-client_id: "logging-server"
+client_id: "my-gogin-skeleton-server"
 retries: 3
 compression: "snappy"
 acks: "all"
 commit_timeout: 10
-consumer_group: "logging-consumer-group"
+consumer_group: "my-gogin-skeleton-consumer-group"
 
 topics:
-  - name: "dashboard-service-logging"
+  - name: "dashboard-service-my-gogin-skeleton"
     concurrency: 2
-  - name: "alert-service-logging"
+  - name: "alert-service-my-gogin-skeleton"
     concurrency: 1

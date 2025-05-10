@@ -4,7 +4,7 @@ import (
 	"context"
 	"errors"
 
-	"logging/internal/common/logger"
+	"my-gogin-skeleton/internal/common/logger"
 
 	"github.com/IBM/sarama"
 )

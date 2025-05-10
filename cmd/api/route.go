@@ -1,9 +1,9 @@
 package main
 
 import (
-	"logging/config"
-	"logging/internal/common/middleware"
-	"logging/internal/infra"
+	"my-gogin-skeleton/config"
+	"my-gogin-skeleton/internal/common/middleware"
+	"my-gogin-skeleton/internal/infra"
 
 	"github.com/gin-gonic/gin"
 	"go.uber.org/zap"

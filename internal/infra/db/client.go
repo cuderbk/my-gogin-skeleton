@@ -6,7 +6,7 @@ import (
 	"log"
 
 	"github.com/jackc/pgx/v5/pgxpool"
-	"logging/config" // đổi thành tên module của bạn
+	"my-gogin-skeleton/config" // đổi thành tên module của bạn
 )
 
 func InitDB(ctx context.Context, cfg config.DBConfig) (*pgxpool.Pool, error) {

@@ -9,9 +9,9 @@ import (
 	"syscall"
 	"time"
 
-	"logging/config"
-	"logging/internal/common/logger"
-	"logging/internal/infra"
+	"my-gogin-skeleton/config"
+	"my-gogin-skeleton/internal/common/logger"
+	"my-gogin-skeleton/internal/infra"
 )
 
 func main() {

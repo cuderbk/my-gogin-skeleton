@@ -1,4 +1,4 @@
-# Logging Backend Skeleton
+# my-gogin-skeleton Backend Skeleton
 
 A clean, scalable Go backend skeleton built with [Gin](https://github.com/gin-gonic/gin), [Google Wire](https://github.com/google/wire), structured configuration files, and dependency injection.
 
@@ -11,15 +11,11 @@ A clean, scalable Go backend skeleton built with [Gin](https://github.com/gin-go
 ├── cmd
 │   └── api
 │       ├── main.go           # Entry point
-│       ├── infra-init.go         # Exposes InitializeServe()
 │       ├── router.go         # Main router setup
-│       ├── handlers.go       # HTTP handlers
-│       └── routes.go         # Routes setup
-├── pkg/                     # Common packages (e.g., logging)
+├── pkg/                     # Common packages (e.g., my-gogin-skeleton)
 │   ├── logger/                # Custom logger
 │   ├── config/                # Config struct definitions
 │   ├── models/                # DB models
-│   └── infra-init.go         # Exposes InitializeServer() 
 ├── config/                   # YAML configs for each subsystem
 ├── internal/
 │   ├── common/               # Logger, middleware, utilities
@@ -42,8 +38,8 @@ A clean, scalable Go backend skeleton built with [Gin](https://github.com/gin-go
 ### 1. Clone and set up
 
 ```bash
-git clone https://github.com/The-Innovators-DATN/logging.git
-cd logging-backend
+git clone https://github.com/The-Innovators-DATN/my-gogin-skeleton.git
+cd my-gogin-skeleton-backend
 ```
 
 ### 2. Initialize Wire DI
@@ -56,13 +52,13 @@ cd cmd/api
 ### 3. Run the application
 
 ```bash
-CONFIG_PATH=../../config go run .
+go run cmd/api/*
 ```
 
 Or directly:
 
 ```bash
-cd cmd/api/main.go
+cd cmd/api
 go run .
 ```
 

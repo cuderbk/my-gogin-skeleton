@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"github.com/redis/go-redis/v9"
-	"logging/config"
+	"my-gogin-skeleton/config"
 )
 
 func InitRedis(cfg config.RedisConfig) (*redis.Client, error) {

@@ -5,7 +5,7 @@ import (
 	"os"
 	"strings"
 
-	"logging/config"
+	"my-gogin-skeleton/config"
 
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"

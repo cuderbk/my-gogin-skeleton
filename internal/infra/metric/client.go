@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"github.com/ClickHouse/clickhouse-go/v2"
-	"logging/config"
+	"my-gogin-skeleton/config"
 )
 
 func InitClickHouse(cfg config.ClickhouseConfig) (clickhouse.Conn, error) {

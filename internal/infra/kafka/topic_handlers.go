@@ -2,7 +2,7 @@ package kafka
 
 import (
 	"context"
-	"logging/internal/common/logger"
+	"my-gogin-skeleton/internal/common/logger"
 )
 
 func DashboardHandler(_ context.Context, k, v []byte) error { /* todo */
@@ -17,6 +17,6 @@ func AlertHandler(_ context.Context, k, v []byte) error { /* todo */
 }
 
 var DefaultRegistry = Registry{
-	"dashboard-service-logging": DashboardHandler,
-	"alert-service-logging":     AlertHandler,
+	"dashboard-service-my-gogin-skeleton": DashboardHandler,
+	"alert-service-my-gogin-skeleton":     AlertHandler,
 }
