@@ -2,6 +2,8 @@ package kafka
 
 import "context"
 
-type ConsumerHandler interface {
-	HandleMessage(ctx context.Context, topic string, key string, value []byte) error
-}
+/* Signature for all handlers */
+type Handler func(ctx context.Context, key, value []byte) error
+
+/* Topic → Handler map */
+type Registry map[string]Handler

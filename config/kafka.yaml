@@ -4,3 +4,11 @@ client_id: "logging-server"
 retries: 3
 compression: "snappy"
 acks: "all"
+commit_timeout: 10
+consumer_group: "logging-consumer-group"
+
+topics:
+  - name: "dashboard-service-logging"
+    concurrency: 2
+  - name: "alert-service-logging"
+    concurrency: 1

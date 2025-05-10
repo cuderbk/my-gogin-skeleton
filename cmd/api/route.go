@@ -3,12 +3,13 @@ package main
 import (
 	"logging/config"
 	"logging/internal/common/middleware"
+	"logging/internal/infra"
 
 	"github.com/gin-gonic/gin"
 	"go.uber.org/zap"
 )
 
-func setupRouter(cfg *config.Config, logg *zap.SugaredLogger, infra *Infra) *gin.Engine {
+func SetupRouter(cfg *config.Config, logg *zap.SugaredLogger, infra *infra.Infra) *gin.Engine {
 	r := gin.New()
 	r.Use(gin.Logger(), gin.Recovery())
 	r.Use(middleware.CORS(), middleware.RequestID())
